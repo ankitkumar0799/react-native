@@ -11,22 +11,12 @@ import {
 import React from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
-const style = {
- 
-};
+const style = {};
 
 const App = () => {
   return (
-    <SafeAreaView style={styles.container }>
-      <Text
-        style={{
-          color: 'white',
-          fontSize: 50,
-          fontWeight: 600,
-        }}
-      >
-        Apasasdp
-      </Text>
+    <SafeAreaView style={styles.container}>
+      <Text style={styles.text}>Apasasdp</Text>
 
       <Image
         style={{
@@ -54,15 +44,8 @@ const App = () => {
       </TouchableOpacity>
 
       {/* button 3 */}
-      <Pressable
-        style={{
-          padding: 10,
-          backgroundColor: 'green',
-          marginTop: 20,
-        }}
-        onPress={() => Alert.alert('sd')}
-      >
-        <Text>button component 3</Text>
+      <Pressable style={styles.button} onPress={() => Alert.alert('sd')}>
+        <Text style={styles.btntext}>push</Text>
       </Pressable>
     </SafeAreaView>
   );
@@ -76,5 +59,31 @@ const styles = StyleSheet.create({
     height: '100%',
     backgroundColor: '#210211',
     alignItems: 'center',
+    gap: 20,
   },
-})
+  text: {
+    color: 'white',
+    fontSize: 50,
+    fontWeight: 600,
+  },
+  button: {
+    // paddingHorizontal:50,
+    // paddingVertical:50,
+    // padding: 10,
+    height: 50,
+    width: 120,
+    backgroundColor: 'red',
+    marginTop: 20,
+    borderRadius: 50 ,
+    alignItems: 'center',
+    justifyContent: 'center',
+    // borderWidth:6,
+    // borderColor:"black"
+  },
+  btntext: {
+    color: 'white',
+    fontWeight: '900',
+    fontSize: 25,
+   
+  },
+});
