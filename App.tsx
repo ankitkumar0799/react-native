@@ -74,7 +74,7 @@ const styles = StyleSheet.create({
   container: {
     width: '100%',
     height: '100%',
-    backgroundColor: '#210210',
+    backgroundColor: '#210211',
     alignItems: 'center',
   },
 })
